@@ -1,6 +1,8 @@
 ##MODULES
 import os, requests, colorama, threading, asyncio, discord, time, AuthGG, getpass, webbrowser, sys
 from AuthGG.client import Client
+from termcolor import cprint 
+from pyfiglet import figlet_format
 from colorama import Fore
 from colorama import init
 from os import system
@@ -12,8 +14,6 @@ def onliner():
     os.system("CLS")
     colorama.init()
     init(strip=not sys.stdout.isatty())
-    from termcolor import cprint 
-    from pyfiglet import figlet_format
 
     cprint(figlet_format('Kings Onliner', font='starwars'),
            'yellow', 'on_red', attrs=['bold'])
@@ -75,17 +75,11 @@ def mainer():
     clear = lambda: os.system('cls')
     clear()
 
-    print("""
-db   dD d888888b d8b   db  d888b  .d8888.       .d88b.  d8b   db db      d888888b d8b   db d88888b d8888b. 
-88 ,8P'   `88'   888o  88 88' Y8b 88'  YP      .8P  Y8. 888o  88 88        `88'   888o  88 88'     88  `8D 
-88,8P      88    88V8o 88 88      `8bo.        88    88 88V8o 88 88         88    88V8o 88 88ooooo 88oobY' 
-88`8b      88    88 V8o88 88  ooo   `Y8b.      88    88 88 V8o88 88         88    88 V8o88 88~~~~~ 88`8b   
-88 `88.   .88.   88  V888 88. ~8~ db   8D      `8b  d8' 88  V888 88booo.   .88.   88  V888 88.     88 `88. 
-YP   YD Y888888P VP   V8P  Y888P  `8888Y'       `Y88P'  VP   V8P Y88888P Y888888P VP   V8P Y88888P 88   YD 
+    cprint(figlet_format('Kings Onliner', font='starwars'),
+           'yellow', 'on_red', attrs=['bold'])
                                                                                                            
                                                                                                            
-     Discord : https://bit.ly/3HbJupE
-         """)
+    print("Discord : https://bit.ly/3HbJupE")
 
     print("[1] - Login")
     print("[2] - Register")
